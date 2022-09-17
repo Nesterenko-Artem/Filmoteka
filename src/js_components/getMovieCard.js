@@ -1,7 +1,7 @@
 import { getGenres, createElementFromHTML } from './helpers';
 
 export function getMovieCard(movie) {
-  const { original_title, release_date, id, poster_path, genre_ids } = movie;
+  const { title,original_title, release_date, id, poster_path, genre_ids } = movie;
   const movieGenres = getGenres(genre_ids, true);
   const movieRelease = new Date(release_date).getFullYear();
 

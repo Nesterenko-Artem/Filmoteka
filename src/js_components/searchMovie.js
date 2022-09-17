@@ -22,7 +22,7 @@ refs.form?.addEventListener('submit', onSearchMovie);
 //Function for requesting and receiving data from the server
 export async function fetchMovies(query, page) {
   const response = await axios(
-    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&page=${page}`
+    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&page=${page}&language=uk-UA`
   );
   return response;
 }

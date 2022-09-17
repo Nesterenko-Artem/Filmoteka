@@ -11,11 +11,11 @@ let currentPage = 1;
 let totalPages = null;
 
 const gallery = document.querySelector('.gallery');
-export const API_KEY = '6308d1a98819d8ffdd4916cbcea5cd95';
+export const API_KEY = 'd2a88fddf770104947ab56d85554b479';
 
 export async function fetchTrendingMovies(page = 1) {
   const response = await axios(
-    `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}&page=${page}`
+    `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}&page=${page}&language=uk-UA`
   );
   return await response.data;
 }
@@ -61,7 +61,7 @@ loadMoreBtn.addEventListener('click', loadMore);
 export function getMovieElements(movies) {
   return movies
     .map((movie) => {
-      const { original_title, release_date, id, poster_path, genre_ids } = movie
+      const { title,original_title, release_date, id, poster_path, genre_ids } = movie
       let movieGenres = getGenres(genre_ids, true);
       const movieRelease = new Date(release_date).getFullYear();
 
@@ -87,7 +87,7 @@ export function getMovieElements(movies) {
       const element = createElementFromHTML(`
         <li class='gallery-item'>
             ${image}
-            <p class="gallery-item__title">${`${original_title.toUpperCase()}`}</p>
+            <p class="gallery-item__title">${`${title.toUpperCase()}`}</p>
             <p class="gallery-item__info">${`${movieGenres} | ${movieRelease}`}</p>
         </li>
       `);
