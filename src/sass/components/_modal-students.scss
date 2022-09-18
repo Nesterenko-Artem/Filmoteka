@@ -51,23 +51,39 @@ body.show-modal .modal{
     }
   }
 .button-close {
+    // position: absolute;
+    // top: 17px;
+    // right: 10px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // padding: 0;
+    // margin: 0;
+    // border: none;
+    //  background-color: transparent;
+    //      fill: black;
     position: absolute;
-    top: 17px;
-    right: 10px;
+    top: 8px;
+    right: 8px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 15%;
+    // border: 1px solid rgba(0, 0, 0, 0.1);
+    // border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    margin: 0;
-    border: none;
-     background-color: transparent;
-         fill: black;
+    background-color: #ff5549;
     transition: all 500ms ease;
       
-    &:hover {
-      fill: #FF6B08;
-      transform: scale(0.8);
-        }
+     &:focus,
+  &:hover {
+    border: none;
+    background-color: #ff6b01;
+    fill: #ffffff;
+    transform: scale(1.1);
+  }
 }
 .team-title {
     margin-bottom: 18px;

@@ -7,17 +7,17 @@
   overflow: scroll;
 }
 .modalfilm {
-  background-color: #ffffff;
+  background-color: #545454;
   position: absolute;
   bottom: 50%;
   right: 50%;
-  border-radius: 4px;
+  border-radius: 1%;
   padding: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
   overflow: auto;
   width: 100vw;
-  height: 95vh;
+  height: 90vh;
   z-index: 22;
 
   transform: translate(50%, 50%);
@@ -38,7 +38,7 @@
   // padding-right: 20px;
 
   .movie-title {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -92,6 +92,9 @@
     .about {
       margin-left: 68px;
       margin-right: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .movie-title {
       font-size: 20px;
@@ -161,12 +164,20 @@
     height: 30px;
     width: 30px;
     border: none;
+    border-radius: 15%;
     // border: 1px solid rgba(0, 0, 0, 0.1);
     // border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #ff5549;
+    &:focus,
+  &:hover {
+    border: none;
+    background-color: #ff6b01;
+    fill: #ffffff;
+    transform: scale(1.1);
+  }
   }
   .modalfoto-img {
     // padding-top: 48px;
@@ -188,7 +199,7 @@
   }
 
   .name-property {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -197,7 +208,7 @@
     color: #8c8c8c;
   }
   .property {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -207,7 +218,7 @@
     color: #000000;
   }
   .about-title {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -223,7 +234,7 @@
     margin-bottom: 8px;
   }
   .about-text {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -235,13 +246,15 @@
     // display: block;
     // width: 110px;
     // height: 44px;
-    background-color: #ffffff;
+    background-color: var(--secondary-txt-color);
+
     // border-color: 10px black;
-    border: 1px solid #000000;
+    border: none;
+    // border: 1px solid #000000;
     border-radius: 5px;
     margin-top: 20px;
     // margin-bottom: 20px;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -265,6 +278,8 @@
     border: none;
     background-color: #ff6b01;
     color: #ffffff;
+    transform: scale(1.1);
+
   }
 
   .vote {
