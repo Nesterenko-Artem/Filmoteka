@@ -61,7 +61,7 @@ loadMoreBtn.addEventListener('click', loadMore);
 export function getMovieElements(movies) {
   return movies
     .map((movie) => {
-      const { title,original_title, release_date, id, poster_path, genre_ids } = movie
+      const { title, original_title, release_date, id, poster_path, genre_ids } = movie
       let movieGenres = getGenres(genre_ids, true);
       const movieRelease = new Date(release_date).getFullYear();
 
